@@ -1,0 +1,37 @@
+//Author: Ian Murray
+//date: 4/30/26
+//purpose: wordle
+
+#include <stdio.h>
+#include <stdbool.h>
+
+char getWord();
+void displayGame(char guessList[6][6], int totalGuesses, char goalWord[]);
+bool fitsGame(char input[]);
+void makeLowerCase(char input[]);
+bool checkWin(char input[], char goalWord[]);
+void printWinMessage(bool winYN);
+
+int main(){
+char goalWord[5];
+goalWord= getword();
+printf("%s", goalWord);
+
+return 0;
+}
+
+char getWord(){
+FILE *fchosenWord = fopen("mystery.txt", "r");
+char word[5];
+if(fchosenWord== NULL){
+	word[0]='w';
+	word[1]='o';
+	word[2]='r';
+	word[3]='d';
+	word[4]='s';
+}
+fscanf(fchosenWord,"%5s", word);
+fclose(fchosenWord);
+return word[];
+
+}
